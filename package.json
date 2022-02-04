@@ -1,0 +1,17 @@
+{
+  "name": "email-generator",
+  "version": "1.0.0",
+  "description": "Designed to help Trilogy tutoring staff generate student emails and more easily manage time zone differences of various students",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "test"
+  },
+  "keywords": [
+    "email-generator",
+    "productivity",
+    "timezone-management"
+  ],
+  "author": "Jack Linhart",
+  "license": "MIT"
+}

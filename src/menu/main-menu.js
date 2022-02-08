@@ -1,7 +1,7 @@
 const mainArray = [
-  "Generate Emails",
+  //   "Generate Emails",
   "Add Student",
-  "Edit Student",
+  //   "Edit Student",
   "Drop Student",
   "Exit",
 ];
@@ -9,7 +9,7 @@ const mainArray = [
 const mainMenu = [
   {
     type: "list",
-    name: "mainMenu",
+    name: "option",
     message: "Select an option",
     choices: mainArray,
   },

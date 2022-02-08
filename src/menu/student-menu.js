@@ -1,4 +1,5 @@
 const { timeZones, locales } = require("../consts");
+
 // create student menu
 // drop student menu
 // edit student menu
@@ -30,8 +31,25 @@ const addStudentMenu = [
 
 const editStudentMenu = [];
 
-const dropStudentMenu = [];
+const dropStudentMenu = (students) => {
+  return [
+    {
+      type: "list",
+      name: "studentToDrop",
+      message: "Select student to drop",
+      choices: Object.keys(students),
+    },
+    {
+      type: "confirm",
+      name: "confirmDrop",
+      message:
+        "Are you sure you want to drop this student? (this cannot be undone)",
+    },
+  ];
+};
 
 module.exports = {
   addStudentMenu,
+  editStudentMenu,
+  dropStudentMenu,
 };

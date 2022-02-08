@@ -1,5 +1,10 @@
-const { students, tutorName } = require("../data/student-list");
-const { addStudentMenu } = require("../menu/");
+const { tutorName } = require("../data/student-list");
+let { students } = require("../data/student-list");
+const {
+  addStudentMenu,
+  editStudentMenu,
+  dropStudentMenu,
+} = require("../menu/");
 const { writeFile, runMenu } = require("../utils");
 const { locales, timeZones } = require("../consts");
 
@@ -16,15 +21,25 @@ async function addStudent() {
     },
   };
   console.log("Adding ", studentName, "to roster");
-  updateStudentListFile({ ...students, ...newStudent });
+  students = { ...students, ...newStudent };
+  updateStudentListFile(students);
 }
 
-function editStudent() {
+async function editStudent() {
   console.log("editing");
 }
 
-function dropStudent() {
-  console.log("dropping");
+async function dropStudent() {
+  const { studentToDrop, confirmDrop } = await runMenu(
+    dropStudentMenu(students)
+  );
+  if (confirmDrop) {
+    console.log("Dropping ", studentToDrop);
+    delete students[studentToDrop];
+    updateStudentListFile(students);
+  } else {
+    console.log("Cancelled drop");
+  }
 }
 
 function updateStudentListFile(newStudentObj) {

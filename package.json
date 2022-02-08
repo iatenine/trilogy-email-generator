@@ -4,8 +4,8 @@
   "description": "Designed to help Trilogy tutoring staff generate student emails and more easily manage time zone differences of various students",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "test"
+    "start": "npm run clear && node app.js",
+    "clear": "rm -rf emails/*"
   },
   "keywords": [
     "email-generator",
@@ -13,5 +13,8 @@
     "timezone-management"
   ],
   "author": "Jack Linhart",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
 }

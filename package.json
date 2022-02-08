@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "start": "npm run clear && node ./src/app.js",
-    "menu-test": "node ./src/menu.js",
     "clear": "rm -rf emails/*",
     "test": "jest --coverage --collectCoverageFrom=src/**/*.js"
   },

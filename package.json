@@ -4,9 +4,9 @@
   "description": "Designed to help Trilogy tutoring staff generate student emails and more easily manage time zone differences of various students",
   "main": "app.js",
   "scripts": {
-    "start": "npm run clear && node app.js",
+    "start": "npm run clear && node ./src/app.js",
     "clear": "rm -rf emails/*",
-    "test": "jest"
+    "test": "jest --coverage --collectCoverageFrom=src/**/*.js"
   },
   "keywords": [
     "email-generator",

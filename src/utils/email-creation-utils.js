@@ -12,6 +12,7 @@ function createEmails(appts) {
       appt[3],
       appt[4]
     );
+
     const filename = `./emails/email-${appt[2]}-${index}.txt`;
     writeFile(filename, email);
   });

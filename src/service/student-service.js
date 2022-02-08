@@ -30,7 +30,7 @@ function updateStudentListFile(newStudentObj) {
   const students = ${JSON.stringify(newStudentObj)};
   
   module.exports = { students, tutorName };`;
-  writeFile("./data/student-list.js", filecontents);
+  writeFile("./src/data/student-list.js", filecontents);
 }
 
 module.exports = {

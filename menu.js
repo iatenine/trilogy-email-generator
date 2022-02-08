@@ -2,6 +2,8 @@ const inquirer = require("inquirer");
 const studentService = require("./service/student-service");
 let running = true;
 
+studentService.addStudent();
+
 const menu = [
   {
     type: "list",
@@ -40,4 +42,4 @@ function runMenu() {
   });
 }
 
-runMenu();
+// runMenu();

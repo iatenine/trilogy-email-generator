@@ -1,35 +1,43 @@
 const inquirer = require("inquirer");
+const studentService = require("./service/student-service");
+let running = true;
 
-const appts = [];
-
-// Main menu
-// -> Appointment Menu
-// -> Student Menu
-// -> Config Menu
-// -> Exit
 const menu = [
   {
     type: "list",
     name: "menu",
     message: "What would you like to do?",
-    choices: ["Add Appointment", "Generate Emails", "Cancel"],
+    choices: [
+      "Generate Emails",
+      "Add Student",
+      "Edit Student",
+      "Drop Student",
+      "Exit",
+    ],
   },
 ];
 
-inquirer.prompt(menu).then((answers) => {
-  switch (answers.menu) {
-    case "Add Appointment":
-      createAppointments();
-      break;
-    case "Generate Emails":
-      viewAppointments();
-      break;
-    case "Cancel":
-      console.log("Goodbye!");
-      break;
-  }
-});
-
-function createAppointment() {
-  appts.push();
+function runMenu() {
+  inquirer.prompt(menu).then((answers) => {
+    switch (answers.menu) {
+      case "Generate Emails":
+        console.log("We'll get there");
+        break;
+      case "Add Student":
+        studentService.addStudent();
+        break;
+      case "Edit Student":
+        studentService.editStudent();
+        break;
+      case "Drop Student":
+        studentService.dropStudent();
+        break;
+      case "Exit":
+        running = false;
+        break;
+    }
+    if (running == true) runMenu();
+  });
 }
+
+runMenu();

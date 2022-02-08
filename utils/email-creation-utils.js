@@ -1,32 +1,23 @@
-const fs = require("fs");
 const { months } = require("../consts");
 const { students, tutorName } = require("../data/student-list");
+const { writeFile } = require("./file-utils");
 const subjectLinePrefix = "FSF Boot Camp - Tutorial Confirmation - ";
 
-const createEmails = async (appts) => {
-  await fs.mkdir("emails", { recursive: true }, (err) => {
-    if (!err) console.log(`emails directory created`);
-  });
-  generateApptEmails(appts);
-};
-
-function generateApptEmails(apptList) {
-  apptList.forEach((appt, index) => {
-    const email = createEmail(
+function createEmails(appts) {
+  appts.forEach((appt, index) => {
+    const email = generateEmailBody(
       months[appt[0]],
       appt[1],
       appt[2],
       appt[3],
       appt[4]
     );
-    fs.writeFile(`./emails/email-${appt[2]}-${index}.txt`, email, (err) => {
-      if (err) throw err;
-      console.log(`${index} email created`);
-    });
+    const filename = `./emails/email-${appt[2]}-${index}.txt`;
+    writeFile(filename, email);
   });
 }
 
-function createEmail(month, day, studentName, hour, minute, year = 2022) {
+function generateEmailBody(month, day, studentName, hour, minute, year = 2022) {
   const myTime = new Date(year, month - 1, day, hour, minute, 0, 0);
   const { timeZone, zoomLink, locale } = students[studentName];
   if (!timeZone || !zoomLink || !locale) {

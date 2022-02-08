@@ -1,4 +1,4 @@
 /data/student-list.js
-/emails
+/emails/email-*
 /node_modules
 package-lock.json

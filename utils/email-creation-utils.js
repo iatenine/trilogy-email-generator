@@ -1,7 +1,6 @@
 const fs = require("fs");
-const path = require("path");
-const { months } = require("./consts");
-const { students, tutorName } = require("./config.js");
+const { months } = require("../consts");
+const { students, tutorName } = require("../data/student-list");
 const subjectLinePrefix = "FSF Boot Camp - Tutorial Confirmation - ";
 
 const createEmails = async (appts) => {

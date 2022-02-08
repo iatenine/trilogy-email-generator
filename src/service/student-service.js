@@ -1,10 +1,12 @@
 const { students, tutorName } = require("../data/student-list");
-const { writeFile } = require("../utils/file-utils");
-const { runMenu } = require("../menu/add-student");
+const { addStudentMenu } = require("../menu/");
+const { writeFile, runMenu } = require("../utils");
 const { locales, timeZones } = require("../consts");
 
 async function addStudent() {
-  const { studentName, timeZone, zoomLink, locale } = await runMenu();
+  const { studentName, timeZone, zoomLink, locale } = await runMenu(
+    addStudentMenu
+  );
   const newStudent = {
     // Use student name as key
     [studentName]: {

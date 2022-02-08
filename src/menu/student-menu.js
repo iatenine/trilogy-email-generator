@@ -1,24 +1,9 @@
-const inquirer = require("inquirer");
 const { timeZones, locales } = require("../consts");
+// create student menu
+// drop student menu
+// edit student menu
 
-const mainArray = [
-  "Generate Emails",
-  "Add Student",
-  "Edit Student",
-  "Drop Student",
-  "Exit",
-];
-
-const mainMenu = [
-  {
-    type: "list",
-    name: "menu",
-    message: "What would you like to do?",
-    choices: mainArray,
-  },
-];
-
-const studentMenu = [
+const addStudentMenu = [
   {
     type: "text",
     name: "studentName",
@@ -43,8 +28,10 @@ const studentMenu = [
   },
 ];
 
-async function runMenu() {
-  return await inquirer.prompt(studentMenu);
-}
+const editStudentMenu = [];
 
-module.exports = { runMenu };
+const dropStudentMenu = [];
+
+module.exports = {
+  addStudentMenu,
+};

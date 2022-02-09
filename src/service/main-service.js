@@ -9,6 +9,9 @@ async function run() {
 
 async function runService(option) {
   switch (option) {
+    case "Generate Emails":
+      console.log("Generating emails");
+      return true;
     case "Add Student":
       await studentService.addStudent();
       return true;

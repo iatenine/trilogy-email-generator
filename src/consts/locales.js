@@ -3,6 +3,10 @@ const locales = {
   US: "en-US",
   Europe: "en-GB",
   Australia: "en-AU",
+
+  getLocaleCode: (locale) => {
+    return locales[locale];
+  },
 };
 
 module.exports = { locales };

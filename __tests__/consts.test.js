@@ -8,7 +8,7 @@ describe("Consts Test Suite", () => {
     expect(timeZones).toBeInstanceOf(Object);
 
     // American time zones
-    expect(timeZones.getJsTimeZoneByCode("EST")).toBe("America/New_York");
+    expect(timeZones.EST).toBe("America/New_York");
     expect(timeZones.Arizona).toBe("America/Phoenix");
     expect(timeZones.EST).not.toBe("America/Chicago");
 
@@ -33,11 +33,9 @@ describe("Consts Test Suite", () => {
 
   it("should have proper months", () => {
     expect(months).toBeInstanceOf(Object);
-    console.log("Jan".toUpperCase());
-    expect(months.getMonthValueByName("JAN")).toBe(1);
-    expect(months.getMonthValueByName("Jan")).toBe(1);
-    expect(months.getMonthValueByName("APR")).not.toBe(10);
-    expect(Object.keys(months.monthList).length).toBe(12);
+    expect(months.Jan).toBe(1);
+    expect(months.Apr).not.toBe(10);
+    expect(Object.keys(months).length).toBe(12);
   });
 
   it("should have proper message body", () => {

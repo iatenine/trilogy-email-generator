@@ -1,18 +1,20 @@
-const mainMenu = {
-  mainArray: [
-    "Generate Emails",
-    "Add Student",
-    //   "Edit Student",
-    "Drop Student",
-    "Exit",
-  ],
+const mainArray = [
+  "Generate Emails",
+  "Add Student",
+  "Edit Student",
+  "Drop Student",
+  "Exit",
+];
 
-  mainMenu: [
+const mainMenu = {
+  options: mainArray,
+
+  menu: [
     {
       type: "list",
       name: "option",
       message: "Select an option",
-      choices: this.mainArray,
+      choices: mainArray,
     },
   ],
 };

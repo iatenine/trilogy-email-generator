@@ -5,7 +5,18 @@ const locales = {
   Australia: "en-AU",
 
   getLocaleCode: (locale) => {
-    return locales[locale];
+    switch (locale) {
+      case "US":
+        return locales.US;
+      case "UK":
+        return locales.Europe;
+      case "Europe":
+        return locales.Europe;
+      case "Australia":
+        return locales.Australia;
+      default:
+        return undefined;
+    }
   },
 };
 

@@ -1,4 +1,5 @@
 const { timeZones, locales } = require("../consts");
+const { students } = require("../data/student-list.js");
 
 // create student menu
 // drop student menu
@@ -29,9 +30,32 @@ const addStudentMenu = () => [
   },
 ];
 
-const editStudentMenu = () => [];
+const editStudentMenu = () => [
+  {
+    type: "list",
+    name: "studentToEdit",
+    message: "Select student to edit",
+    choices: Object.keys(students),
+  },
+  {
+    type: "list",
+    name: "propertyToEdit",
+    message: "Select property to edit",
+    choices: ["name", "timeZone", "zoomLink", "locale"],
+  },
+  {
+    type: "text",
+    name: "newValue",
+    message: "Enter new value",
+  },
+  {
+    type: "confirm",
+    name: "confirmUpdate",
+    message: "Are you sure you want to update this student?",
+  },
+];
 
-const dropStudentMenu = (students) => [
+const dropStudentMenu = () => [
   {
     type: "list",
     name: "studentToDrop",

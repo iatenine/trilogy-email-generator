@@ -1,8 +1,15 @@
 const {
   addStudentMenu,
-  editStudentMenu,
   dropStudentMenu,
+  studentMenu,
 } = require("./student-menu");
 const { mainMenu } = require("./main-menu");
+const appointmentMenu = require("./appointment-menu");
 
-module.exports = { addStudentMenu, editStudentMenu, dropStudentMenu, mainMenu };
+module.exports = {
+  addStudentMenu,
+  dropStudentMenu,
+  mainMenu,
+  studentMenu,
+  appointmentMenu,
+};

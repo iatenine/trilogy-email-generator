@@ -1,16 +1,12 @@
 const { tutorName } = require("../data/student-list");
 let { students } = require("../data/student-list");
-const {
-  addStudentMenu,
-  editStudentMenu,
-  dropStudentMenu,
-} = require("../menu/");
+const { studentMenu } = require("../menu");
 const { writeFile, runMenu } = require("../utils");
 const { locales, timeZones } = require("../consts");
 
 async function addStudent() {
   const { studentName, timeZone, zoomLink, locale } = await runMenu(
-    addStudentMenu
+    studentMenu.addStudentMenu
   );
   const newStudent = {
     // Use student name as key
@@ -20,21 +16,25 @@ async function addStudent() {
       locale: locales[locale],
     },
   };
-  console.log("Adding ", studentName, "to roster");
+  console.log(
+    "Adding ",
+    studentName,
+    "to roster (app needs to be restarted to see changes)"
+  );
   students = { ...students, ...newStudent };
   updateStudentListFile(students);
 }
 
-async function editStudent() {
-  console.log("editing");
-}
-
 async function dropStudent() {
   const { studentToDrop, confirmDrop } = await runMenu(
-    dropStudentMenu(students)
+    studentMenu.dropStudentMenu
   );
   if (confirmDrop) {
-    console.log("Dropping ", studentToDrop);
+    console.log(
+      "Dropping ",
+      studentToDrop,
+      " (you must restart the app to see changes)"
+    );
     delete students[studentToDrop];
     updateStudentListFile(students);
   } else {
@@ -52,6 +52,5 @@ function updateStudentListFile(newStudentObj) {
 
 module.exports = {
   addStudent,
-  editStudent,
   dropStudent,
 };

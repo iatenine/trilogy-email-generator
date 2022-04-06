@@ -1,7 +1,7 @@
 const mainArray = [
-  //   "Generate Emails",
+  "Add Appointment",
+  "Generate Emails",
   "Add Student",
-  //   "Edit Student",
   "Drop Student",
   "Exit",
 ];
@@ -15,4 +15,4 @@ const mainMenu = [
   },
 ];
 
-module.exports = { mainArray, mainMenu };
+module.exports = { mainMenu };

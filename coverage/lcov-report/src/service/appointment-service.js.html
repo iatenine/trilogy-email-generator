@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/service/main-service.js</title>
+    <title>Code coverage report for src/service/appointment-service.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/service</a> main-service.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/service</a> appointment-service.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/17</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
@@ -93,66 +93,78 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { mainMenu } = <span class="cstat-no" title="statement not covered" >require("../menu/");</span>
-const { runMenu } = <span class="cstat-no" title="statement not covered" >require("../utils/");</span>
-const studentService = <span class="cstat-no" title="statement not covered" >require("./student-service");</span>
-const appointmentService = <span class="cstat-no" title="statement not covered" >require("./appointment-service");</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { createEmails, runMenu } = <span class="cstat-no" title="statement not covered" >require("../utils");</span>
+const { appointmentMenu } = <span class="cstat-no" title="statement not covered" >require("../menu");</span>
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >run(</span>) {
-  const { option } = <span class="cstat-no" title="statement not covered" >await runMenu(mainMenu);</span>
-<span class="cstat-no" title="statement not covered" >  if (await runService(option)) <span class="cstat-no" title="statement not covered" >run();</span></span>
-}
+const apptList = <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-async function <span class="fstat-no" title="function not covered" >runService(</span>option) {
-<span class="cstat-no" title="statement not covered" >  switch (option) {</span>
-    case "Add Appointment":
-<span class="cstat-no" title="statement not covered" >      await appointmentService.addAppointment();</span>
-<span class="cstat-no" title="statement not covered" >      return true;</span>
-    case "Generate Emails":
-<span class="cstat-no" title="statement not covered" >      await appointmentService.generateEmails();</span>
-<span class="cstat-no" title="statement not covered" >      return true;</span>
-    case "Add Student":
-<span class="cstat-no" title="statement not covered" >      await studentService.addStudent();</span>
-<span class="cstat-no" title="statement not covered" >      return true;</span>
-    case "Drop Student":
-<span class="cstat-no" title="statement not covered" >      await studentService.dropStudent();</span>
-<span class="cstat-no" title="statement not covered" >      return true;</span>
-    case "Exit":
-<span class="cstat-no" title="statement not covered" >      return false;</span>
-  }
-}
+const getNewAppt = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
+  const newAppt = <span class="cstat-no" title="statement not covered" >await runMenu(appointmentMenu.newApptMenu);</span>
+  const formattedAppt = <span class="cstat-no" title="statement not covered" >[</span>
+    newAppt.month,
+    newAppt.day,
+    newAppt.student,
+    newAppt.hour,
+    newAppt.minute,
+  ];
+<span class="cstat-no" title="statement not covered" >  return formattedAppt;</span>
+};
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = { run };</span>
+const addAppointment = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
+  const newAppt = <span class="cstat-no" title="statement not covered" >await getNewAppt();</span>
+<span class="cstat-no" title="statement not covered" >  apptList.push(newAppt);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("New appointment added: ", newAppt);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("Appointment list: ", apptList);</span>
+};
+&nbsp;
+// generateEmails
+const generateEmails = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >as</span>ync () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  await createEmails(apptList);</span>
+<span class="cstat-no" title="statement not covered" >  console.log(`Email directory populated with ${apptList.length} appointments`);</span>
+};
+&nbsp;
+<span class="cstat-no" title="statement not covered" >module.exports = {</span>
+  addAppointment,
+  generateEmails,
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

@@ -16,5 +16,7 @@ const timeZones = {
   ACDT: "Australia/Adelaide",
   AWST: "Australia/Perth",
 };
-
-module.exports = { timeZones };
+(getJsTimeZoneByCode = (timeZone) => {
+  return timeZones[timeZone];
+}),
+  (module.exports = { timeZones, getJsTimeZoneByCode });

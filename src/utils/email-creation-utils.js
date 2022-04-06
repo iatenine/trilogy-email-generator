@@ -6,7 +6,7 @@ const subjectLinePrefix = "FSF Boot Camp - Tutorial Confirmation - ";
 function createEmails(appts) {
   appts.forEach((appt, index) => {
     const email = generateEmailBody(
-      months[appt[0]],
+      months.getMonthValueByName(appt[0]),
       appt[1],
       appt[2],
       appt[3],

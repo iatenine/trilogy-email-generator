@@ -7,7 +7,7 @@ describe("Menu Test Suite", () => {
     expect(mainMenu).toBeInstanceOf(Array);
     expect(mainMenu).toHaveLength(1);
     expect(mainMenu[0].choices).toBeInstanceOf(Array);
-    expect(mainMenu[0].choices.length).toBe(4);
+    expect(mainMenu[0].choices.length).toBeGreaterThan(0);
     expect(mainMenu[0].choices[mainMenu[0].choices.length - 1]).toBe("Exit");
   });
 

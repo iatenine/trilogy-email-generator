@@ -1,5 +1,12 @@
 // Example test
-const { locales, months, messageBody, timeZones } = require("../src/consts");
+const {
+  locales,
+  months,
+  messageBody,
+  timeZones,
+  getJsTimeZoneByCode,
+  getLocaleCode,
+} = require("../src/consts");
 const messages = require("../src/consts/message");
 
 // Test all objects exported from consts directory
@@ -9,7 +16,7 @@ describe("Consts Test Suite", () => {
     expect(timeZones).toBeInstanceOf(Object);
 
     // American time zones
-    expect(timeZones.getJsTimeZoneByCode("EST")).toBe("America/New_York");
+    expect(getJsTimeZoneByCode("EST")).toBe("America/New_York");
     expect(timeZones.Arizona).toBe("America/Phoenix");
     expect(timeZones.EST).not.toBe("America/Chicago");
 
@@ -31,10 +38,10 @@ describe("Consts Test Suite", () => {
     expect(locales.Europe).toBe("en-GB");
     expect(locales.Australia).toBe("en-AU");
 
-    expect(locales.getLocaleCode("US")).toBe("en-US");
-    expect(locales.getLocaleCode("Australia")).toBe("en-AU");
-    expect(locales.getLocaleCode("UK")).toBe("en-GB");
-    expect(locales.getLocaleCode("invalid")).toBe(undefined);
+    expect(getLocaleCode("US")).toBe("en-US");
+    expect(getLocaleCode("Australia")).toBe("en-AU");
+    expect(getLocaleCode("UK")).toBe("en-GB");
+    expect(getLocaleCode("invalid")).toBe(undefined);
   });
 
   it("should have proper months", () => {

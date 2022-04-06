@@ -16,15 +16,25 @@ async function addStudent() {
       locale: locales[locale],
     },
   };
-  console.log("Adding ", studentName, "to roster");
+  console.log(
+    "Adding ",
+    studentName,
+    "to roster (app needs to be restarted to see changes)"
+  );
   students = { ...students, ...newStudent };
   updateStudentListFile(students);
 }
 
 async function dropStudent() {
-  const { studentToDrop, confirmDrop } = await runMenu(dropStudentMenu);
+  const { studentToDrop, confirmDrop } = await runMenu(
+    studentMenu.dropStudentMenu
+  );
   if (confirmDrop) {
-    console.log("Dropping ", studentToDrop);
+    console.log(
+      "Dropping ",
+      studentToDrop,
+      " (you must restart the app to see changes)"
+    );
     delete students[studentToDrop];
     updateStudentListFile(students);
   } else {

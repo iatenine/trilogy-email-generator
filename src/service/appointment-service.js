@@ -16,31 +16,32 @@ const getNewAppt = async () => {
 };
 
 const addAppointment = async () => {
+  console.log("Current appointments: ", apptList);
   const newAppt = await getNewAppt();
   apptList.push(newAppt);
-  console.log("New appointment added: ", newAppt);
-  console.log("Appointment list: ", apptList);
-};
+  console.log(
+    `You now have ${apptList.length} appointment${
+      apptList.length > 1 || apptList.length === 0 ? "s" : ""
+    }`
+  );
+  apptList.forEach((appt, i) => {
+    const studentName = appt[2];
+    const month = appt[0];
+    const day = appt[1];
+    const hour = appt[3];
 
-// dropAppointment
-const dropAppointment = async () => {
-  const apptToDrop = await runMenu(appointmentMenu.dropApptMenu(apptList));
-  apptList.filter((appt) => {
-    appt[0] !== apptToDrop[0] ||
-      appt[1] !== apptToDrop[1] ||
-      appt[2] !== apptToDrop[2] ||
-      appt[3] !== apptToDrop[3] ||
-      appt[4] !== apptToDrop[4];
+    console.log(`${i + 1}. ${studentName} - ${day} ${month}`);
   });
+  console.log("");
 };
 
 // generateEmails
 const generateEmails = async () => {
   await createEmails(apptList);
+  console.log(`Email directory populated with ${apptList.length} appointments`);
 };
 
 module.exports = {
   addAppointment,
-  dropAppointment,
   generateEmails,
 };

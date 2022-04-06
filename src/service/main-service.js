@@ -13,17 +13,11 @@ async function runService(option) {
     case "Add Appointment":
       await appointmentService.addAppointment();
       return true;
-    case "Drop Appointment":
-      await appointmentService.dropAppointment();
-      return true;
     case "Generate Emails":
       await appointmentService.generateEmails();
       return true;
     case "Add Student":
       await studentService.addStudent();
-      return true;
-    case "editStudent":
-      await studentService.editStudent();
       return true;
     case "Drop Student":
       await studentService.dropStudent();

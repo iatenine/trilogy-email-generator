@@ -44,24 +44,4 @@ const newApptMenu = [
   },
 ];
 
-const dropApptMenu = (currentAppts) => {
-  const apptChoices = currentAppts.map((appt) => {
-    return `${appt.month} ${appt.day} ${appt.hour}:${appt.minute}`;
-  });
-  return [
-    {
-      type: "list",
-      name: "apptToDrop",
-      message: "Select appointment to drop",
-      choices: apptChoices,
-    },
-    {
-      type: "confirm",
-      name: "confirmDrop",
-      message:
-        "Are you sure you want to drop this appointment? (this cannot be undone)",
-    },
-  ];
-};
-
-module.exports = { newApptMenu, dropApptMenu };
+module.exports = { newApptMenu };

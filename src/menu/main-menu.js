@@ -1,6 +1,5 @@
 const mainArray = [
   "Add Appointment",
-  "Drop Appointment",
   "Generate Emails",
   "Add Student",
   "Drop Student",

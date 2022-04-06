@@ -42,6 +42,5 @@ function updateStudentListFile(newStudentObj) {
 
 module.exports = {
   addStudent,
-  editStudent,
   dropStudent,
 };

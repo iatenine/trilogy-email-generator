@@ -1,7 +1,8 @@
 const mainArray = [
+  "Add Appointment",
+  "Drop Appointment",
   "Generate Emails",
   "Add Student",
-  "Edit Student",
   "Drop Student",
   "Exit",
 ];

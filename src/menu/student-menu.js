@@ -5,7 +5,7 @@ const { students } = require("../data/student-list.js");
 // drop student menu
 // edit student menu
 
-const addStudentMenu = () => [
+const addStudentMenu = [
   {
     type: "text",
     name: "studentName",
@@ -30,7 +30,7 @@ const addStudentMenu = () => [
   },
 ];
 
-const editStudentMenu = () => [
+const editStudentMenu = [
   {
     type: "list",
     name: "studentToEdit",
@@ -55,7 +55,7 @@ const editStudentMenu = () => [
   },
 ];
 
-const dropStudentMenu = () => [
+const dropStudentMenu = [
   {
     type: "list",
     name: "studentToDrop",

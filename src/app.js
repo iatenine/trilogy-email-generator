@@ -6,6 +6,10 @@ const appts = [
   ["FEB", 10, "John Doe", 18, 0],
 ];
 
-createEmails(appts);
+// createEmails(appts);
 
-// run();
+async function init() {
+  await run();
+}
+
+init();

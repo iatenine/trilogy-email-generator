@@ -6,17 +6,13 @@ const mainArray = [
   "Exit",
 ];
 
-const mainMenu = {
-  options: mainArray,
+const mainMenu = [
+  {
+    type: "list",
+    name: "option",
+    message: "Select an option",
+    choices: mainArray,
+  },
+];
 
-  menu: [
-    {
-      type: "list",
-      name: "option",
-      message: "Select an option",
-      choices: mainArray,
-    },
-  ],
-};
-
-module.exports = mainMenu;
+module.exports = { mainMenu };

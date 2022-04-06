@@ -1,16 +1,12 @@
 const { tutorName } = require("../data/student-list");
 let { students } = require("../data/student-list");
-const {
-  addStudentMenu,
-  editStudentMenu,
-  dropStudentMenu,
-} = require("../menu/");
+const { studentMenu } = require("../menu");
 const { writeFile, runMenu } = require("../utils");
 const { locales, timeZones } = require("../consts");
 
 async function addStudent() {
   const { studentName, timeZone, zoomLink, locale } = await runMenu(
-    addStudentMenu
+    studentMenu.addStudentMenu
   );
   const newStudent = {
     // Use student name as key
@@ -30,9 +26,7 @@ async function editStudent() {
 }
 
 async function dropStudent() {
-  const { studentToDrop, confirmDrop } = await runMenu(
-    dropStudentMenu(students)
-  );
+  const { studentToDrop, confirmDrop } = await runMenu(dropStudentMenu);
   if (confirmDrop) {
     console.log("Dropping ", studentToDrop);
     delete students[studentToDrop];

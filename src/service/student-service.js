@@ -21,10 +21,6 @@ async function addStudent() {
   updateStudentListFile(students);
 }
 
-async function editStudent() {
-  console.log("editing");
-}
-
 async function dropStudent() {
   const { studentToDrop, confirmDrop } = await runMenu(dropStudentMenu);
   if (confirmDrop) {

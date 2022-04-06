@@ -30,31 +30,6 @@ const addStudentMenu = [
   },
 ];
 
-const editStudentMenu = [
-  {
-    type: "list",
-    name: "studentToEdit",
-    message: "Select student to edit",
-    choices: Object.keys(students),
-  },
-  {
-    type: "list",
-    name: "propertyToEdit",
-    message: "Select property to edit",
-    choices: ["name", "timeZone", "zoomLink", "locale"],
-  },
-  {
-    type: "text",
-    name: "newValue",
-    message: "Enter new value",
-  },
-  {
-    type: "confirm",
-    name: "confirmUpdate",
-    message: "Are you sure you want to update this student?",
-  },
-];
-
 const dropStudentMenu = [
   {
     type: "list",
@@ -72,7 +47,6 @@ const dropStudentMenu = [
 
 const studentMenu = {
   addStudentMenu: addStudentMenu,
-  editStudentMenu: editStudentMenu,
   dropStudentMenu: dropStudentMenu,
 };
 

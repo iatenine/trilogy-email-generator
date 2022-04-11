@@ -1,9 +1,16 @@
 const { mainMenu } = require("../menu/");
 const { runMenu } = require("../utils/");
+const { tutorName } = require("../data/student-list");
 const studentService = require("./student-service");
 const appointmentService = require("./appointment-service");
 
 async function run() {
+  if (tutorName === "Tom from MySpace") {
+    console.error(
+      `Please update the tutorName in your copy of student-list.js, ${tutorName}`
+    );
+    return false;
+  }
   const { option } = await runMenu(mainMenu);
   if (await runService(option)) run();
 }

@@ -1,4 +1,4 @@
-const { months, messageBody } = require("../consts");
+const { months, messages } = require("../consts");
 const { students, tutorName } = require("../data/student-list");
 const { writeFile } = require("./file-utils");
 const subjectLinePrefix = "FSF Boot Camp - Tutorial Confirmation - ";
@@ -26,19 +26,13 @@ function generateEmailBody(month, day, studentName, hour, minute, year = 2022) {
   }
   const apptStr = getApptString(myTime, timeZone, locale);
 
-  return `
-${subjectLinePrefix} ${apptStr}
--------------------------------------------------------------------
-
-Hi ${studentName.split(" ")[0]}!
-
-Thank you for scheduling your session with me. I am looking forward to our session on ${apptStr}.
-If something comes up and the scheduled time will not work, let me know a minimum of 6 hours before the appointment time and we’ll figure something out.
-
-This session will take place here: ${zoomLink ?? "<Tutor’s Zoom Link>"}
-
-${messageBody}
-${tutorName} `;
+  return messages.generateEmail(
+    subjectLinePrefix,
+    apptStr,
+    studentName,
+    zoomLink,
+    tutorName
+  );
 }
 
 function getApptString(date, timezone, locale) {

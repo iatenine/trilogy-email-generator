@@ -1,6 +1,6 @@
 // RENAME THIS FILE TO student-list.js
 // tutorName will be used to generate a signature, only include last name if you wish it added to the bottom of your email
-const tutorName = undefined;
+const tutorName = "Jack";
 
 // Student names should be used as keys
 // each student should have the following properties:

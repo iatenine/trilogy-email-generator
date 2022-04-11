@@ -1,11 +1,11 @@
 const { months } = require("./months");
-const { messageBody } = require("./message");
+const messages = require("./message");
 const { timeZones, getJsTimeZoneByCode } = require("./timezones");
 const { locales, getLocaleCode } = require("./locales");
 
 module.exports = {
   months,
-  messageBody,
+  messages,
   timeZones,
   locales,
   getJsTimeZoneByCode,

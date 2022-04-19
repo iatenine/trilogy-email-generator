@@ -36,10 +36,6 @@ function generateEmailBody(month, day, studentName, hour, minute, year = 2022) {
 }
 
 function getApptString(date, timezone, locale) {
-  // Assert date is valid
-  if (!date.getMonth()) {
-    throw new Error("Invalid date");
-  }
   return date.toLocaleString(locale, {
     timeZone: timezone,
     weekday: "short",
